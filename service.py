@@ -1,3 +1,8 @@
+import sqlite3
+
 def authenticate(token: str) -> bool:
-    query = "SELECT * FROM tokens WHERE t = " + token
+    conn = sqlite3.connect(":memory:")
+    cursor = conn.cursor()
+    query = "SELECT * FROM tokens WHERE t = '" + token + "'"
+    cursor.execute(query)
     return False
