@@ -1,2 +1,3 @@
 def authenticate(token: str) -> bool:
-    return True
+    query = "SELECT * FROM tokens WHERE t = " + token
+    return False
