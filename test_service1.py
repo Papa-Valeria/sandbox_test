@@ -1,4 +1,4 @@
-from service import authenticate
+from service1 import authenticate
 
 
 def test_authenticate_valid_credentials() -> None:
